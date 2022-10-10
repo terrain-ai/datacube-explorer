@@ -7,7 +7,7 @@ services:
       args:
         ENVIRONMENT: deployment
     ports:
-      - 80:8080
+      - 8080:8080
     environment:
       # - DB_HOSTNAME=host.docker.internal
       - DB_HOSTNAME=postgres
@@ -20,7 +20,7 @@ services:
       - FLASK_DEBUG=1
       # - VIRTUAL_HOST=datacube.explorer
     depends_on:
-      - postgres
+     - postgres
 
   postgres:
     image: postgis/postgis:13-3.1
